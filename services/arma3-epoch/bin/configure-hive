@@ -1,0 +1,21 @@
+#!/bin/sh
+
+TEMPLATE="""
+[EpochServer]
+BattlEyePath = ${ARMA3_BATTLEEYE:=/data/battleye}
+InstanceID = ${EPOCH_INSTANCE_ID}
+
+[Redis]
+IP = ${REDIS_HOST:=db}
+Port = ${REDIS_PORT:=6379}
+DB = ${REDIS_DB:=0}
+Password = ${REDIS_PASSWORD}
+
+[SteamAPI]
+Key = ${STEAM_APIKEY}
+VACBanned = 0
+VACMinimumNumberOfBans = 0
+VACMaximumDaysSinceLastBan = 0
+"""
+
+echo template | tee /opt/arma3/@epochhive/epochserver.ini

@@ -16,3 +16,6 @@ ENV REDIS_DB 0
 RUN apt-get install nodejs npm -y
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 RUN npm install coffee-script requestify async 
+
+ADD bin/configure-hive /usr/bin/configure-hive
+RUN chmod +x /usr/bin/configure-hive
