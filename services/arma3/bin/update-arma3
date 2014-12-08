@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo -H -u core bash -c """
+/opt/steam/steamcmd.sh \
+	+@NoPromptForPassword 1 \
+	+@ShutdownOnFailedCommand 1 \
+	+login ${STEAM_USER} ${STEAM_PASS} \
+	+force_install_dir ${ARMA3_SERVER_ROOT} \
+	+app_update ${STEAM_APPID} validate \
+	+quit"""

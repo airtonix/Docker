@@ -1,0 +1,8 @@
+#!/bin/bash
+${ARMA3_SERVER_BINARY}
+	-name="${ARMA3_SERVER_NAME}"
+	-port="${ARMA3_SERVER_PORT}"
+	-cfg="${ARMA3_SERVER_CONFIG}"
+	-config="${ARMA3_WORLD_CONFIG}"
+	-profiles="${ARMA3_PROFILES_PATH}"
+	-mods=${ARMA3_MODLIST}
